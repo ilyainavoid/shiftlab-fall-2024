@@ -23,9 +23,21 @@ export const router = createBrowserRouter([
     ),
     children: [
       {
+        path: NAVIGATION_ROUTES.HOMEPAGE,
+        lazy: async () => ({
+          Component: (await import('@/pages/homepage')).default,
+        }),
+      },
+      {
         path: NAVIGATION_ROUTES.SIGN_IN,
         lazy: async () => ({
           Component: (await import('@/pages/sign-in-page')).default,
+        }),
+      },
+      {
+        path: NAVIGATION_ROUTES.SUCCESS,
+        lazy: async () => ({
+          Component: (await import('@/pages/sign-in-success-page')).default,
         }),
       },
     ],
