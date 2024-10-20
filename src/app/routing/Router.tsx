@@ -13,7 +13,7 @@ export const router = createBrowserRouter([
     element: (
       <Suspense
         fallback={
-          <div className='flex h-[100vh] w-[100vw] items-center justify-center'>
+          <div className='h-[100vh] w-[100vw] flex flex-col items-center justify-center'>
             <Spinner />
           </div>
         }
